@@ -20,15 +20,15 @@ public class SquareArrayAnalyzer {
       Arrays.sort(inputArray);
         Arrays.sort(squaredValues);
 
-        int count =0;
-        for ( int k =0; k<inputArray.length;k++){
-            inputArray[k]*=inputArray[k];
-            if (inputArray[k]!=(squaredValues[k])){
-                return false;
-            }
-         }
+        for ( int k =0; k<inputArray.length;k++) {
+            inputArray[k] *= inputArray[k];
+
+        }
+        if(Arrays.equals(inputArray,squaredValues)){
+            return true;
+        };
 
 
-         return true;
+         return false;
     }
 }
